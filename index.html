@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI video tool comparison — Wan 3.0 vs Pavo AI vs Rea Video</title>
+<meta name="description" content="A comparison of three AI video tools by job type: Wan 3.0 for single shots, Pavo AI for full sequences with editing and dubbing, Rea Video for reference-driven recreation. Plus FAQ.">
+<style>
+:root{--ink:#12141a;--muted:#5b6371;--line:#e6e8ee;--accent:#0b57ff;--bg:#fff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 ui-sans-serif,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+main{max-width:56rem;margin:0 auto;padding:3.5rem 1.25rem 1rem}
+h1{font-size:clamp(1.55rem,3.6vw,2.15rem);line-height:1.18;letter-spacing:-.02em;margin:0 0 .6rem}
+.lede{color:var(--muted);margin:0 0 2.5rem;max-width:44rem}
+h2{font-size:1.15rem;margin:2.6rem 0 .6rem;letter-spacing:-.01em}
+h3{font-size:1rem;margin:1.6rem 0 .4rem}
+p{margin:0 0 .9rem}
+a{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(11,87,255,.28)}
+a:hover{border-bottom-color:var(--accent)}
+table{border-collapse:collapse;width:100%;margin:1.2rem 0 1.6rem;font-size:.94rem}
+th,td{text-align:left;padding:.6rem .5rem;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:.76rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+ul{margin:0 0 1rem;padding-left:1.2rem}
+li{margin:.25rem 0}
+.card{border:1px solid var(--line);border-radius:12px;padding:1.2rem 1.3rem;margin:1rem 0}
+.card h3{margin-top:0}
+dl{margin:0}
+dt{font-weight:600;margin-top:1.1rem}
+dd{margin:.2rem 0 0;color:#333}
+footer{max-width:56rem;margin:0 auto;padding:1rem 1.25rem 3rem;color:var(--muted);font-size:.84rem}
+</style>
+</head>
+<body>
+<main>
+<h1>AI video tool comparison: pick by job, not by feature list</h1>
+<p class="lede">Three browser-based tools, compared by the job they are actually good at. All three run without an install, none of them is a general-purpose editor, and none is a full replacement for a desktop NLE — that is the point of this page.</p>
+
+<h2>The two-question test</h2>
+<p>Before opening any tool, answer two questions in order:</p>
+<ul>
+<li><strong>Do I already have a reference clip?</strong> If yes, you want re-shooting, not generation.</li>
+<li><strong>Is this one shot or a sequence?</strong> One shot goes to a generator. A sequence needs an editor plus a dubbing step.</li>
+</ul>
+<p>That split maps cleanly onto the three tools below.</p>
+
+<h2>Side by side</h2>
+<table>
+<thead><tr><th>Tool</th><th>Core job</th><th>Wrong for</th><th>Link</th></tr></thead>
+<tbody>
+<tr>
+<td><strong>Wan 3.0</strong></td>
+<td>Text-to-video, image-to-video, motion presets. Fastest route to one usable shot.</td>
+<td>Anything longer than a few shots — no real timeline.</td>
+<td><a href="https://wan-3.io">wan-3.io</a></td>
+</tr>
+<tr>
+<td><strong>Pavo AI</strong></td>
+<td>Generation, timeline editing, captions and multilingual dubbing in one workspace.</td>
+<td>A single 5-second clip — the timeline overhead dominates.</td>
+<td><a href="https://pavoai.app">pavoai.app</a></td>
+</tr>
+<tr>
+<td><strong>Rea Video</strong></td>
+<td>Reference-driven recreation: re-shoot an existing clip with a new subject.</td>
+<td>Original creative work — it re-shoots, it does not brainstorm.</td>
+<td><a href="https://reavideo.pro">reavideo.pro</a></td>
+</tr>
+</tbody>
+</table>
+
+<h2>Wan 3.0 — one shot, camera move is the point</h2>
+<div class="card">
+<h3>What it does</h3>
+<p>Prompt in, clip out, with motion presets exposed as first-class controls. A slow push-in and a handheld drift read completely differently, and switching between them is one click rather than a prompt rewrite.</p>
+<h3>How I use it</h3>
+<ul>
+<li>Write the shot as a single sentence with the camera move baked in.</li>
+<li>Lock the motion preset first, then adjust the prompt.</li>
+<li>Regenerate rather than edit; the shot is short enough that re-rolling is cheaper.</li>
+</ul>
+<p><a href="https://wan-3.io">https://wan-3.io</a></p>
+</div>
+
+<h2>Pavo AI — a sequence that needs editing and dubbing</h2>
+<div class="card">
+<h3>What it does</h3>
+<p>Generation, timeline editing, captions and multilingual dubbing share one workspace. The deciding feature is character consistency between shots: lock the reference frame once, and shot three still looks like shot one instead of drifting.</p>
+<h3>The loop that works</h3>
+<ol>
+<li>Storyboard six shots as text, one line each.</li>
+<li>Generate each shot with the same locked character reference.</li>
+<li>Cut the sequence before touching audio.</li>
+<li>Dub last — dubbing before the cut is locked wastes a pass.</li>
+<li>Export 9:16 and 16:9 from the same timeline.</li>
+</ol>
+<p><a href="https://pavoai.app">https://pavoai.app</a> · prompt gallery: <a href="https://pavoai.app/prompts">https://pavoai.app/prompts</a></p>
+</div>
+
+<h2>Rea Video — an existing clip needs a variant</h2>
+<div class="card">
+<h3>What it does</h3>
+<p>Give it a clip you like, describe the new subject, and it re-creates the shot with your subject in it. This is the shortest path from "that ad looked good" to "that ad with my product".</p>
+<h3>How I use it</h3>
+<ul>
+<li>Pick a reference where the camera work is legible — fast cuts confuse the recreation.</li>
+<li>Describe only the subject change; leave the staging to the reference.</li>
+<li>Treat the output as a first pass, not a final.</li>
+</ul>
+<p><a href="https://reavideo.pro">https://reavideo.pro</a></p>
+</div>
+
+<h2>FAQ</h2>
+<dl>
+<dt>Do I need to install anything?</dt>
+<dd>No. All three run in the browser. A desktop NLE is still better for long-form work and colour.</dd>
+
+<dt>Which one is fastest to a usable clip?</dt>
+<dd>Wan 3.0, if the shot is a single beat. It has the least setup between idea and output.</dd>
+
+<dt>Which one should I use for a 30-second ad?</dt>
+<dd>Pavo AI — the sequence needs a timeline, captions and usually a dubbed variant, and those live in the same tab.</dd>
+
+<dt>Can I keep a character consistent across shots?</dt>
+<dd>Yes, in Pavo AI: lock the reference frame once and reuse it for every subsequent shot. That single constraint removed most of my rework.</dd>
+
+<dt>What if I only have a competitor's ad as a starting point?</dt>
+<dd>Rea Video. It is built for re-shooting a reference rather than generating from a description.</dd>
+
+<dt>Does the tool matter more than the prompt?</dt>
+<dd>No. All three produce noticeably better output from a concrete shot description — subject, framing, light, duration — than from a mood word. Write the shot list first.</dd>
+
+<dt>Are these affiliate links?</dt>
+<dd>No. Plain links to the three sites.</dd>
+</dl>
+</main>
+<footer>Personal comparison notes · CC0 1.0</footer>
+</body>
+</html>
